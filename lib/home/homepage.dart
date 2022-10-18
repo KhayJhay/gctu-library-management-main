@@ -1,6 +1,7 @@
 import 'package:dropdown_search/dropdown_search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gctu_library_management/home/books_detail_page.dart';
 import 'package:searchfield/searchfield.dart';
 
 import '../constants.dart';
@@ -130,82 +131,133 @@ class _HomepageState extends State<Homepage> {
                         children: <Widget>[
                           Padding(
                             padding: const EdgeInsets.only(top: 25.0,bottom:25, right: 20),
-                            child: Container(
-                              width: _width*0.33,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black.withOpacity(0.06),
-                                      blurRadius: 4,
-                                      spreadRadius: 3,
-                                    ),
-                                  ]
+                            child: InkWell(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context) =>  Detailed_Page(
+                                    bookTitle: 'Encyclopaedia Of Computer Science',
+                                    bookDesc: "Computer science combines the principles of engineering,"
+                                        " mathematics and science to study and develop computers, "
+                                        "networks, hardware, software, databases and much more. "
+                                        "Because of that, there is a wide range of potential "
+                                        "careers within the field, from software engineering "
+                                        "to computer programming or system analysis.",
+                                    bookImage: Image.asset('assets/images/book5.jpg'),
+                                )));
+                              },
+                              child: Container(
+                                width: _width*0.33,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black.withOpacity(0.06),
+                                        blurRadius: 4,
+                                        spreadRadius: 3,
+                                      ),
+                                    ]
+                                ),
+                                child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(15),
+                                    child: Image.asset('assets/images/book5.jpg', fit: BoxFit.cover,)),
                               ),
-                              child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(15),
-                                  child: Image.asset('assets/images/book5.jpg', fit: BoxFit.cover,)),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(top: 25.0,bottom:25, right: 20),
-                            child: Container(
-                              width: _width*0.33,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black.withOpacity(0.06),
-                                      blurRadius: 4,
-                                      spreadRadius: 3,
-                                    ),
-                                  ]
+                            child: InkWell(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context) =>  Detailed_Page(
+                                  bookTitle: 'C++ Programming  Language',
+                                  bookDesc: 'C++ is a general-purpose programming language created by '
+                                      'Danish computer scientist Bjarne Stroustrup '
+                                      'as an extension of the C programming language,',
+                                  bookImage: Image.asset('assets/images/Book2.jpg'),
+                                )));
+                              },
+                              child: Container(
+                                width: _width*0.33,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black.withOpacity(0.06),
+                                        blurRadius: 4,
+                                        spreadRadius: 3,
+                                      ),
+                                    ]
+                                ),
+                                child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(15),
+                                    child: Image.asset('assets/images/Book2.jpg', fit: BoxFit.cover,)),
                               ),
-                              child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(15),
-                                  child: Image.asset('assets/images/Book2.jpg', fit: BoxFit.cover,)),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(top: 25.0,bottom:25, right: 20),
-                            child: Container(
-                              width: _width*0.33,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black.withOpacity(0.06),
-                                      blurRadius: 4,
-                                      spreadRadius: 3,
-                                    ),
-                                  ]
+                            child: InkWell(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context) =>  Detailed_Page(
+                                  bookTitle: "Java Beginner's Guide",
+                                  bookDesc: "Java is a platform-independent, object-oriented programming language (OOP). "
+                                      "It is not to be confused with JavaScript, a scripting"
+                                      " language used to create dynamic web pages. Due to its "
+                                      "reliability and ease of use, Java is one of "
+                                      "the most popular programming languages in the world.",
+                                  bookImage: Image.asset('assets/images/book3.jpg'),
+                                )));
+                              },
+                              child: Container(
+                                width: _width*0.33,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black.withOpacity(0.06),
+                                        blurRadius: 4,
+                                        spreadRadius: 3,
+                                      ),
+                                    ]
+                                ),
+                                child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(15),
+                                    child: Image.asset('assets/images/book3.jpg', fit: BoxFit.cover,)),
                               ),
-                              child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(15),
-                                  child: Image.asset('assets/images/book3.jpg', fit: BoxFit.cover,)),
                             ),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(top: 25.0,bottom:25, right: 20),
-                            child: Container(
-                              width: _width*0.33,
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(15),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black.withOpacity(0.06),
-                                      blurRadius: 4,
-                                      spreadRadius: 3,
-                                    ),
-                                  ]
+                            child: InkWell(
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context) =>  Detailed_Page(
+                                  bookTitle: "Begin to  code with Python",
+                                  bookDesc: 'Python is a high-level, general-purpose programming language.'
+                                      'Its design philosophy emphasizes code readability with the use '
+                                      'of significant indentation. Python is dynamically-typed and '
+                                      'garbage-collected. It supports multiple programming paradigms, '
+                                      'including structured, object-oriented and functional programming.',
+                                  bookImage: Image.asset('assets/images/book1.jpg', fit: BoxFit.cover,),
+                                )));
+                              },
+                              child: Container(
+                                width: _width*0.33,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(15),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Colors.black.withOpacity(0.06),
+                                        blurRadius: 4,
+                                        spreadRadius: 3,
+                                      ),
+                                    ]
+                                ),
+                                child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(15),
+                                    child: Image.asset('assets/images/book1.jpg', fit: BoxFit.cover,)),
                               ),
-                              child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(15),
-                                  child: Image.asset('assets/images/book1.jpg', fit: BoxFit.cover,)),
                             ),
                           ),
                         ],

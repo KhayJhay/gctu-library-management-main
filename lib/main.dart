@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:gctu_library_management/home/books_detail_page.dart';
+import 'package:gctu_library_management/home/homepage.dart';
 
 import 'onboarding/onBoarding.dart';
 
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: onBoardingPage(),
+      home:  Homepage(),
     );
   }
 }
