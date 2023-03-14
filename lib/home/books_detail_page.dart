@@ -2,10 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:gctu_library_management/constants.dart';
+import 'package:gctu_library_management/home/borrow_Book_Form.dart';
+
 class Detailed_Page extends StatefulWidget {
   final String bookTitle;
   final String bookDesc;
-  final Image  bookImage;
+  final Image bookImage;
   const Detailed_Page({
     Key? key,
     required this.bookTitle,
@@ -29,7 +31,7 @@ class _Detailed_PageState extends State<Detailed_Page> {
           ClipPath(
             clipper: WaveClipperTwo(),
             child: Container(
-              height: _height/1.48,
+              height: _height / 1.48,
               width: _width,
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -41,14 +43,20 @@ class _Detailed_PageState extends State<Detailed_Page> {
                     Row(
                       children: [
                         IconButton(
-                            icon: Icon(CupertinoIcons.chevron_back, color: bgHome,),
-                          onPressed: (){
-                              Navigator.pop(context);
+                          icon: Icon(
+                            CupertinoIcons.chevron_back,
+                            color: bgHome,
+                          ),
+                          onPressed: () {
+                            Navigator.pop(context);
                           },
                         ),
                         IconButton(
-                          icon: Icon(CupertinoIcons.bookmark, color: bgHome,),
-                          onPressed: (){
+                          icon: Icon(
+                            CupertinoIcons.bookmark,
+                            color: bgHome,
+                          ),
+                          onPressed: () {
                             Navigator.pop(context);
                           },
                         ),
@@ -59,9 +67,11 @@ class _Detailed_PageState extends State<Detailed_Page> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Container(
-                          width: _width*0.43,
+                          width: _width * 0.43,
                           height: 260,
                           decoration: BoxDecoration(
                             color: bgHome,
@@ -74,51 +84,127 @@ class _Detailed_PageState extends State<Detailed_Page> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(top: 8.0),
-                          child: Text(widget.bookTitle, style: TextStyle(fontSize: 16, color: bgHome, fontFamily: 'Poppins-Bold'),),
+                          child: Text(
+                            widget.bookTitle,
+                            style: TextStyle(
+                                fontSize: 16,
+                                color: bgHome,
+                                fontFamily: 'Poppins-Bold'),
+                          ),
                         ),
-                        Text('by Bjarne Straustroupe', style: TextStyle(fontSize: 13, color: bgHome, fontFamily: 'Poppins-Light'),),
-                        SizedBox(height: 15,),
+                        Text(
+                          'by Bjarne Straustroupe',
+                          style: TextStyle(
+                              fontSize: 13,
+                              color: bgHome,
+                              fontFamily: 'Poppins-Light'),
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Column(
                               children: [
-                                Text('Rating', style: TextStyle(fontSize: 13, color: bgHome, fontFamily: 'Poppins-Light'),),
-                                Text('4.5', style: TextStyle(fontSize: 16, color: bgHome, fontFamily: 'Poppins-Bold'),),
+                                Text(
+                                  'Rating',
+                                  style: TextStyle(
+                                      fontSize: 13,
+                                      color: bgHome,
+                                      fontFamily: 'Poppins-Light'),
+                                ),
+                                Text(
+                                  '4.5',
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      color: bgHome,
+                                      fontFamily: 'Poppins-Bold'),
+                                ),
                               ],
                             ),
                             Column(
                               children: [
-                                Text('Pages', style: TextStyle(fontSize: 13, color: bgHome, fontFamily: 'Poppins-Light'),),
-                                Text('300', style: TextStyle(fontSize: 16, color: bgHome, fontFamily: 'Poppins-Bold'),),
+                                Text(
+                                  'Pages',
+                                  style: TextStyle(
+                                      fontSize: 13,
+                                      color: bgHome,
+                                      fontFamily: 'Poppins-Light'),
+                                ),
+                                Text(
+                                  '300',
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      color: bgHome,
+                                      fontFamily: 'Poppins-Bold'),
+                                ),
                               ],
                             ),
                             Column(
                               children: [
-                                Text('Language', style: TextStyle(fontSize: 13, color: bgHome, fontFamily: 'Poppins-Light'),),
-                                Text('ENG', style: TextStyle(fontSize: 16, color: bgHome, fontFamily: 'Poppins-Bold'),),
+                                Text(
+                                  'Language',
+                                  style: TextStyle(
+                                      fontSize: 13,
+                                      color: bgHome,
+                                      fontFamily: 'Poppins-Light'),
+                                ),
+                                Text(
+                                  'ENG',
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      color: bgHome,
+                                      fontFamily: 'Poppins-Bold'),
+                                ),
                               ],
                             ),
                             Column(
                               children: [
-                                Text('Category', style: TextStyle(fontSize: 13, color: bgHome, fontFamily: 'Poppins-Light'),),
-                                Text('IT', style: TextStyle(fontSize: 16, color: bgHome, fontFamily: 'Poppins-Bold'),),
+                                Text(
+                                  'Category',
+                                  style: TextStyle(
+                                      fontSize: 13,
+                                      color: bgHome,
+                                      fontFamily: 'Poppins-Light'),
+                                ),
+                                Text(
+                                  'IT',
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      color: bgHome,
+                                      fontFamily: 'Poppins-Bold'),
+                                ),
                               ],
                             ),
                           ],
                         ),
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 20,
+                        ),
                         TextButton(
-                            onPressed: (){},
-                            child: Container(
-                              height: 45,
-                              width: 150,
-                              decoration: BoxDecoration(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => BorrowBookForm(),
+                                ));
+                          },
+                          child: Container(
+                            height: 45,
+                            width: 150,
+                            decoration: BoxDecoration(
                                 color: bgHome,
-                                borderRadius: BorderRadius.circular(20)
-                              ),
-                              child: Center(child: Text('Book Now', style: TextStyle(fontSize: 15, color: Colors.white, fontFamily: 'Poppins-Light'),)),
-                            ),
+                                borderRadius: BorderRadius.circular(20)),
+                            child: Center(
+                                child: Text(
+                              'Borrow Now',
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.white,
+                                  fontFamily: 'Poppins-Light'),
+                            )),
+                          ),
                         ),
                       ],
                     )
@@ -128,14 +214,28 @@ class _Detailed_PageState extends State<Detailed_Page> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 640,left: 20,  right: 20),
+            padding: const EdgeInsets.only(top: 640, left: 20, right: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text("What's it about?", style: TextStyle(fontSize: 18, color: Colors.white, fontFamily: 'Poppins-Bold'),),
-              SizedBox(height: 12,),
-              Text(widget.bookDesc, style: TextStyle(fontSize: 14, color: Colors.white, fontFamily: 'Poppins-Light'),),
-            ],
+              children: [
+                Text(
+                  "What's it about?",
+                  style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontFamily: 'Poppins-Bold'),
+                ),
+                SizedBox(
+                  height: 12,
+                ),
+                Text(
+                  widget.bookDesc,
+                  style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.white,
+                      fontFamily: 'Poppins-Light'),
+                ),
+              ],
             ),
           )
         ],
